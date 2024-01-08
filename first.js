@@ -3,4 +3,4 @@ let sum=5;
 
 let thum=(num==sum)?"true":"false";
 
-console.log(thum);
+console.log(thum)
