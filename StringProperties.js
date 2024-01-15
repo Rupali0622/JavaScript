@@ -25,6 +25,10 @@ console.log(`My name is ${student.name} from ${student.city}`);
 
 console.log("Rupali\nChauhan");
 console.log("Rupali\tChauhan");
+console.log('Rupali\'Chauhan');
+console.log("Rupali\"Chauhan");
+console.log("Rupali\rChauhan"); //Carrage return
+
 
 //6=String Methods in JS
 //These are built-in functions to manipulate a String.
@@ -61,3 +65,4 @@ console.log(b.replaceAll("lo","p"));
 //(7) str.charAt(idx)
 let c="Rupali";
 console.log(c.charAt(0));
+ 
