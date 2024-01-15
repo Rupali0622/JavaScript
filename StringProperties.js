@@ -41,3 +41,23 @@ console.log(str2.toLowerCase());
 let str3="     Rupali Chauhan      ";
 console.log(str3.trim());
 
+//(4) str.slice(start,end) end value is not included(non-inclusive)
+let str4="012345678";
+console.log(str4.slice(1,6));
+console.log(str4.slice(3)); //output=345678
+
+//(5) str1.concat(str2)
+let str5="Rupali";
+let str6="Chauhan";
+let res=str5.concat(str6); // let res=str5+str6;  // let res="My name is"+ str5 +str6;
+console.log(res);
+
+//(6) str.replace(searchVal,newVal)
+let a="Hello";
+console.log(a.replace("H","Y"));
+let b="Helololo"; //Replace all matching values
+console.log(b.replaceAll("lo","p"));
+
+//(7) str.charAt(idx)
+let c="Rupali";
+console.log(c.charAt(0));
