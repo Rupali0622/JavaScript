@@ -1,0 +1,21 @@
+/* #div{
+    background-color: pink;
+}
+.span{
+    background-color: yellow;
+}
+.one{
+    background-color: violet;
+} */
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+#div-id{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
