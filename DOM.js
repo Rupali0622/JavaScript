@@ -51,5 +51,60 @@ console.log(div.innerHTML);
 console.log(div.textContent);
 
 //(6) Attribute
+ //getAttribute
+ /*let divid=document.querySelector("#div-id");
+ console.log(divid);
+
+ let ids=divid.getAttribute("id");
+ console.log(ids);
+
+ let divclass=document.querySelector(".div-class");
+ console.log(divclass);
+
+ let classs=divclass.getAttribute("class");
+ console.log(classs);
+
+ //setAttribute
+ 
+let ids2=divid.setAttribute("id","First");
+
+let class2=divclass.setAttribute("class","Second");
 
 
+//(7)
+// node.style
+
+divid.style.backgroundColor="Green";
+divclass.style.backgroundColor="indigo";*/
+
+
+//(8) Insert Element
+//1- create
+let newBtn=document.createElement("button");
+newBtn.innerText="Click me!";
+console.log(newBtn);
+
+//2- add
+//(a) start of node(inside)
+let diiv=document.querySelector("div");
+diiv.append(newBtn);
+
+//(b) start of node(inside)
+// diiv.prepend(newBtn);
+
+//(c) before node (outside)
+// diiv.before(newBtn);
+
+//(d) After Node(outside)
+// diiv.after(newBtn);
+
+// appendchild() Create a new paragraph element, and append it to the end of the document body
+const p = document.createElement("p");
+p.innerText="I am a paragraph";
+document.body.appendChild(p);
+
+// removechild() 
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+const garbage = parent.removeChild(child);
+console.log(garbage);
