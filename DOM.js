@@ -108,3 +108,5 @@ const parent = document.getElementById("parent");
 const child = document.getElementById("child");
 const garbage = parent.removeChild(child);
 console.log(garbage);
+
+

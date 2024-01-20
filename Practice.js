@@ -52,4 +52,16 @@ console.log(productofarray);*/
 // console.log(divs[2]);
 // divs[2].innerText="New Unique value 3";
 
+//(1)
+let btn=document.createElement("button");
+btn.innerText="Click me!";
+btn.style.backgroundColor="Red";
+btn.style.color="White";
+
+document.querySelector("body").prepend(btn);
+
+//(2)
+let p=document.querySelector("p");
+let s=p.setAttribute("class","newpara");
+console.log(s);
 
