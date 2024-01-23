@@ -1,14 +1,19 @@
-let btn=document.querySelector("#mode");
-let currMode="light";
+let btn=document.querySelector("button");
+
+let body=document.querySelector("body");
+
+let currmode="light";
 
 btn.addEventListener("click",()=>{
-    if(currMode==="light"){
-        currMode="dark";
-        document.querySelector("body").style.backgroundColor="black";
+    if(currmode==="light"){
+        currmode="dark";
+        body.classList.add("black");
+        body.classList.remove("white");
     }else{
-        currMode="light";
-        document.querySelector("body").style.backgroundColor="white";
+        currmode="light";
+        body.classList.add("white");
+        body.classList.remove("black");
     }
-        console.log(currMode);
+    console.log(currmode);
 });
 
