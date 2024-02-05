@@ -1,16 +1,18 @@
-//  const addition=function(){
-//     console.log("add");
-//  }
+//(1)
+ /*const addition=function(){
+    console.log("add");
+ }
 
-//  setTimeout(addition,4000);
-
-
-//  setTimeout(()=>{
-//     console.log("Hello");
-//  },6000);
+ setTimeout(addition,4000);
 
 
-// Callback Hell
+ setTimeout(()=>{
+    console.log("Hello");
+ },6000);*/
+
+
+// (2) Callback Hell-------------
+
  /*function getData(dataId,getNextdata){
 
     setTimeout(()=>{
@@ -31,7 +33,9 @@
     });
  });*/
 
- //Promises
+
+ //(3) Promises-------------------------
+
  /*let promise=new Promise((resolve,reject)=>{
     console.log("I am a promise");
     // resolve("success");
@@ -60,7 +64,8 @@
 // }
 
 
-//use of res and err
+//(4) use of res and err-----------------------------
+
 /*let promise=getPromise();
 promise.then((res)=>{
     console.log("Promise fulfilled",res);
@@ -71,35 +76,36 @@ promise.catch((err)=>{
 })*/
 
 //Example how to use promise
-// function asyncfunc(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(()=>{
-//             console.log("Data1")
-//             resolve("Success");
-//         },4000);
-//     });
-// }
-// function asyncfunc2(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(()=>{
-//             console.log("Data2")
-//             resolve("Success");
-//         },4000);
-//     });
-// }
+/*function asyncfunc(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data1")
+            resolve("Success");
+        },4000);
+    });
+}
+function asyncfunc2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data2")
+            resolve("Success");
+        },4000);
+    });
+}
 
 
-// //promise chaning
-// console.log("Fetching Data1....");
-// let promise=asyncfunc();
-// promise.then((res)=>{
-//     console.log("Fetching Data2....");
-//     let promise2=asyncfunc2();
-//     promise2.then((res)=>{
-//     })
-// })
+//promise chaning
+console.log("Fetching Data1....");
+let promise=asyncfunc();
+promise.then((res)=>{
+    console.log("Fetching Data2....");
+    let promise2=asyncfunc2();
+    promise2.then((res)=>{
+    })
+})*/
 
-//Promise Chaining
+//Promise Chaining-------------------------
+
 //----------(1)
 /*function asyncfunc1(){
 return new Promise((resolve,reject)=>{
@@ -144,5 +150,37 @@ asyncfunc1().then((res)=>{
             return  getData(4)
         })*/
 
-        
-        
+
+//Async-Await-----------------------------------
+
+/*function api(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            console.log("Weather Data");
+            resolve("success");
+        },2000);
+    });
+}
+
+async function weatherData(){
+    await api();
+}*/
+
+function getData(data){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data",data);
+            resolve("success");
+        },2000);
+    })
+    
+}
+
+//making it IIFE
+(async function (){
+    await getData(1);
+    await getData(2);
+    await getData(3);
+    await getData(4);
+    await getData(5);
+})();
